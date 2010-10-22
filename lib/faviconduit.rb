@@ -16,6 +16,7 @@ module Faviconduit
   def self.get(url)
 
     uri = Addressable::URI.heuristic_parse(url)
+    uri = Addressable::URI.encode(uri) # needed for chars with accents in url
 
     doc = Nokogiri::HTML(open(uri))
 

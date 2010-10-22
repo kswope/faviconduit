@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
      "lib/faviconduit.rb",
      "lib/runner.rb",
      "test/helper.rb",
+     "test/rails_root/.gitignore",
      "test/rails_root/Gemfile",
      "test/rails_root/Gemfile.lock",
      "test/rails_root/README",
@@ -58,10 +59,6 @@ Gem::Specification.new do |s|
      "test/rails_root/config/routes.rb",
      "test/rails_root/db/seeds.rb",
      "test/rails_root/doc/README_FOR_APP",
-     "test/rails_root/log/development.log",
-     "test/rails_root/log/production.log",
-     "test/rails_root/log/server.log",
-     "test/rails_root/log/test.log",
      "test/rails_root/public/404.html",
      "test/rails_root/public/422.html",
      "test/rails_root/public/500.html",
@@ -74,7 +71,6 @@ Gem::Specification.new do |s|
      "test/rails_root/script/rails",
      "test/rails_root/test/functional/welcome_controller_test.rb",
      "test/rails_root/test/unit/helpers/welcome_helper_test.rb",
-     "test/rails_root/tmp/pids/server.pid",
      "test/test_faviconduit.rb"
   ]
   s.homepage = %q{http://github.com/kswope/faviconduit}
