@@ -12,10 +12,11 @@ raise "url missing" unless uri = ARGV[0]
 
 begin
 
-  data = Faviconduit.read(uri)
+  fav = Faviconduit.get(uri)
 
   File.open('favicon.ico', 'w') do |file|
-    file.write(data)
+    puts "writing #{fav.url}";
+    file.write(fav.data)
   end
 
 rescue Faviconduit::MissingFavicon

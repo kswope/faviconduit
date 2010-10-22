@@ -8,10 +8,12 @@ Attempts to download a URL's favicon.
 
   begin
 
-    data = Faviconduit.read(uri)
+    fav = Faviconduit.read(uri)
+
+    puts "found favicon at #{fav.url}"
 
     File.open('favicon.ico', 'w') do |file|
-      file.write(data)
+      file.write(fav.data)
     end
 
   rescue Faviconduit::MissingFavicon
@@ -26,13 +28,19 @@ Attempts to download a URL's favicon.
 
 == Methods
 
-   Faviconduit.read(uri)
+   Faviconduit.get(uri)
 
-Takes a url and attempts to returns the favicon data.  The url can be
+Takes a url and attempts to returns the favicon object.  The url can be
 fairly loosely specified because Addressable::URI.heuristic_parse is
 used to figure it out.
 
----
+   obj.url
+
+The favicon url it was ultimately found at.
+
+   obj.data
+
+The favicon image data.
 
 == Exceptions
 

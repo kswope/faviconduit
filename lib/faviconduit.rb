@@ -10,7 +10,10 @@ module Faviconduit
   class InvalidFavicon < Error; end
   class MissingFavicon < Error; end
 
-  def self.read(url)
+  class Favicon; attr_accessor :url, :data end
+
+
+  def self.get(url)
 
     uri = Addressable::URI.heuristic_parse(url)
 
@@ -35,7 +38,10 @@ module Faviconduit
         raise(InvalidFavicon, "zero data")
       end
 
-      return data
+      fav = Favicon.new
+      fav.url = fav_uri.to_s
+      fav.data = data
+      return fav
 
     rescue OpenURI::HTTPError => e
       raise MissingFavicon if e.to_s[/404/]

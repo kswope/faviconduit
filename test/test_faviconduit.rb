@@ -74,25 +74,30 @@ class TestFaviconduit < Test::Unit::TestCase
       end
 
       assert_raise Faviconduit::MissingFavicon do
-        Faviconduit.read(url + 'missing')
+        Faviconduit.get(url + 'missing')
       end
 
       assert_raise Faviconduit::InvalidFavicon do
-        Faviconduit.read(url + 'html')
+        Faviconduit.get(url + 'html')
       end
 
       assert_raise Faviconduit::InvalidFavicon do
-        Faviconduit.read(url + 'zero')
+        Faviconduit.get(url + 'zero')
       end
 
-      assert Faviconduit.read(url + 'default')
-      assert Faviconduit.read(url + 'icon')
-      assert Faviconduit.read(url + 'shortcut_icon')
+      assert Faviconduit.get(url + 'default')
+      assert Faviconduit.get(url + 'icon')
+      assert Faviconduit.get(url + 'shortcut_icon')
+
+      # minimal test of api
+      fav = Faviconduit.get(url + 'default')
+      assert_equal 'http://localhost:3333/favicon.ico',  fav.url
+      assert fav.data
 
       # hide default favicon.ico
       system "mv public/favicon.ico public/favicon.ico.off"
       assert_raise Faviconduit::MissingFavicon do
-        puts Faviconduit.read(url + 'default')
+        puts Faviconduit.get(url + 'default')
       end
       system "mv public/favicon.ico.off public/favicon.ico"
 

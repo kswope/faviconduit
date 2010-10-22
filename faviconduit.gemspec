@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kevin Swope"]
-  s.date = %q{2010-10-21}
+  s.date = %q{2010-10-22}
   s.description = %q{download a webpage's favicon}
   s.email = %q{git-kevdev@snkmail.com}
   s.extra_rdoc_files = [
@@ -23,8 +23,58 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "faviconduit.gemspec",
      "lib/faviconduit.rb",
+     "lib/runner.rb",
      "test/helper.rb",
+     "test/rails_root/Gemfile",
+     "test/rails_root/Gemfile.lock",
+     "test/rails_root/README",
+     "test/rails_root/Rakefile",
+     "test/rails_root/app/controllers/application_controller.rb",
+     "test/rails_root/app/controllers/welcome_controller.rb",
+     "test/rails_root/app/helpers/application_helper.rb",
+     "test/rails_root/app/helpers/welcome_helper.rb",
+     "test/rails_root/app/views/layouts/application.html.erb",
+     "test/rails_root/app/views/welcome/default.html.erb",
+     "test/rails_root/app/views/welcome/html.html.erb",
+     "test/rails_root/app/views/welcome/icon.html.erb",
+     "test/rails_root/app/views/welcome/missing.html.erb",
+     "test/rails_root/app/views/welcome/shortcut_icon.html.erb",
+     "test/rails_root/app/views/welcome/zero.html.erb",
+     "test/rails_root/config.ru",
+     "test/rails_root/config/application.rb",
+     "test/rails_root/config/boot.rb",
+     "test/rails_root/config/environment.rb",
+     "test/rails_root/config/environments/development.rb",
+     "test/rails_root/config/environments/production.rb",
+     "test/rails_root/config/environments/test.rb",
+     "test/rails_root/config/initializers/backtrace_silencers.rb",
+     "test/rails_root/config/initializers/inflections.rb",
+     "test/rails_root/config/initializers/mime_types.rb",
+     "test/rails_root/config/initializers/secret_token.rb",
+     "test/rails_root/config/initializers/session_store.rb",
+     "test/rails_root/config/locales/en.yml",
+     "test/rails_root/config/routes.rb",
+     "test/rails_root/db/seeds.rb",
+     "test/rails_root/doc/README_FOR_APP",
+     "test/rails_root/log/development.log",
+     "test/rails_root/log/production.log",
+     "test/rails_root/log/server.log",
+     "test/rails_root/log/test.log",
+     "test/rails_root/public/404.html",
+     "test/rails_root/public/422.html",
+     "test/rails_root/public/500.html",
+     "test/rails_root/public/favicon.ico",
+     "test/rails_root/public/images/favicon_valid.ico",
+     "test/rails_root/public/images/favicon_zero.ico",
+     "test/rails_root/public/images/rails.png",
+     "test/rails_root/public/javascripts/application.js",
+     "test/rails_root/public/robots.txt",
+     "test/rails_root/script/rails",
+     "test/rails_root/test/functional/welcome_controller_test.rb",
+     "test/rails_root/test/unit/helpers/welcome_helper_test.rb",
+     "test/rails_root/tmp/pids/server.pid",
      "test/test_faviconduit.rb"
   ]
   s.homepage = %q{http://github.com/kswope/faviconduit}
