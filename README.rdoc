@@ -8,7 +8,7 @@ Attempts to download a URL's favicon.
 
   begin
 
-    fav = Faviconduit.read(uri)
+    fav = Faviconduit.get(uri)
 
     puts "found favicon at #{fav.url}"
 
