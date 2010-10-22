@@ -7,3 +7,5 @@ require 'faviconduit'
 
 class Test::Unit::TestCase
 end
+
+require "addressable/uri"
